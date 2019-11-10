@@ -73,7 +73,7 @@ Hi palmop! You've successfully authenticated, but GitHub does not provide shell 
 ```
 
 mi accorgo che il push prende la chiave sbagliata, allora edito .ssh/config in questo modo:
-```
+```bash
 #Host dokku.me
 #  IdentityFile "~/.ssh/id_rsa"
 Host github-as-palmop
@@ -84,6 +84,7 @@ Host github-as-palmop
 ```
 
 e in .git/config nel progetto metto come remote: 
+```
 [core]
 	repositoryformatversion = 0
 	filemode = true
