@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    {{> header}}
+    <body>
+        {{> headerbody}}
+        <p>{{screamIt welcome}}</p>
+        <p>I'm {{Name}} and I like
+            {{#list likes}}
+            {{name}}
+            {{/list}}
+        </p>
+        {{> footer}}
+    </body>
+</html>
