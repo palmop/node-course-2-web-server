@@ -105,8 +105,12 @@ e in .git/config nel progetto metto come remote:
 al prosto della url commentata metto qiella che fa riferimento a **github-as-palmop**
 
 # heroku zone
+queste operazioni sono da fare da dentro la cartella del progetto.
 - fai un account su heroku.com
 - vai su https://devcenter.heroku.com , consigliano di fare `sudo snap install --classic heroku` per ubuntu.
 - `heroku login`
 - la porta in listen del server deve essere settata con una variabile di ambiente. (process.env)
 - heroku guarda lo "start" (nella sezione scripts) in package.json , che poi in locale se fai `npm start` fa la stessa cosa
+- `heroku create` restituisce 2 repo una di heroku e una di github
+- `git push heroku master` fa partire il processo di deploy , alla fine ti restituisce l'endpoint
+- l'endpoint che restituisce lo puoi aprore con un browser o fare direttamente `heroku open`

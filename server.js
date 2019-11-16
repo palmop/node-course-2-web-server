@@ -72,6 +72,14 @@ app.get('/bad', (req, res) => {
     })
 });
 
+app.get('/nana', (req, res) => {
+    res.render(
+        'nana.hbs',
+        {
+            'picture': '20191115_202455_001-ANIMATION.gif',
+        });
+});
+
 app.listen(port, () => {
     console.log(`server started and listen on ${port}`);
 });
