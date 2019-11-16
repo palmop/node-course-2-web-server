@@ -1,8 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-const port = process.env.PORT || 3000; 
-
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -11,12 +9,8 @@ app.set('view engine', hbs);
 
 hbs.registerHelper('list', function(items, options) {
     //console.log(items);
-    //console.log(options);
     var out = "<ul>";
     for(var i=0, l=items.length; i<l; i++) {
-      //out = out + "<li>" + items[i]['name'] + "</li>";
-      // nell' hbs c'è {{#list likes}}{{name}}{{/list}}
-      // che vuole dire che "fn" chiede la proprietà 'name' dell'iesimo likes
       out = out + "<li>" + options.fn(items[i]) + "</li>";
     }
     return out + "</ul>";
@@ -72,6 +66,6 @@ app.get('/bad', (req, res) => {
     })
 });
 
-app.listen(port, () => {
-    console.log(`server started and listen on ${port}`);
+app.listen(3000, () => {
+    console.log("server started and listen on 3000");
 });

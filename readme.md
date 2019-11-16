@@ -103,3 +103,10 @@ e in .git/config nel progetto metto come remote:
 	merge = refs/heads/master
 ```
 al prosto della url commentata metto qiella che fa riferimento a **github-as-palmop**
+
+# heroku zone
+- fai un account su heroku.com
+- vai su https://devcenter.heroku.com , consigliano di fare `sudo snap install --classic heroku` per ubuntu.
+- `heroku login`
+- la porta in listen del server deve essere settata con una variabile di ambiente. (process.env)
+- heroku guarda lo "start" (nella sezione scripts) in package.json , che poi in locale se fai `npm start` fa la stessa cosa
